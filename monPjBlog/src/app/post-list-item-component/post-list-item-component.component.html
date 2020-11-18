@@ -1,7 +1,22 @@
-<hr/>post content :
-<br/>
-{{post}}
-{{post.content}}
-{{post.loveIts}}
-{{post.created_at}}
 
+<li [ngClass]="{
+    'list-group-item':true
+}">
+   
+<h3>{{post.title}}</h3>
+
+<p>{{post.content}}</p>
+
+<table width="100%">
+    <tr>
+        <td><div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" (click)="up()">+</button>
+            <button type="button" class="btn btn-secondary" (click)="down()">-</button>
+           
+          </div></td>
+        <td>{{post.loveIts}}</td>
+        <td>{{post.created_at|date:'EEEE d MMMM y'}}</td>
+    
+    </tr>
+</table>
+</li>

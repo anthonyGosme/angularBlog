@@ -1,5 +1,5 @@
 import { Component, Input,OnInit } from '@angular/core';
-
+import { post } from '../utility/post';
 @Component({
   selector: 'PostListComponent',
   templateUrl: './post-list-component.component.html',
@@ -8,7 +8,7 @@ import { Component, Input,OnInit } from '@angular/core';
 export class PostListComponentComponent implements OnInit {
   @Input() appareilName: string ="" ; 
   @Input() appareilStatus : string =""; 
-  @Input() posts :any; 
+  @Input() posts :post[]=[]; 
   constructor() { }
 
   ngOnInit(): void {

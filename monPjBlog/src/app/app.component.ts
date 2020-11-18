@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { post } from './utility/post';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,26 +9,9 @@ export class AppComponent {
   title = 'monPjBlog';
  
   posts = [
-    {
-      title: 'premier post',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      loveIts: 142,
-      created_at: 'Tuesday, November 15, 2020'
-    },
-    {
-      title: 'deuxieme post',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      loveIts: 82,
-      created_at: 'Tuesday, November 16, 2020'
-    },
-    {
-      title: 'troisième post',
-      content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      loveIts: 15,
-      created_at: 'Tuesday, November 17, 2020'
-    }
+    new post("premier titre",12),
+    new post("deuxieme titre",129),
+    new post("troisième titre",1233),
+
   ];
 }
